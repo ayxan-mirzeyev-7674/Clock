@@ -59,6 +59,12 @@ setInterval(() => {
 
     clock.appendChild(number);
   }
+  console.log(time.getHours());
+  document.title = `${
+    time.getHours() < 10 ? "0" + time.getHours() : time.getHours()
+  }:${time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes()}:${
+    time.getSeconds() < 10 ? "0" + time.getSeconds() : time.getSeconds()
+  }`;
 }, 1000);
 
 function toRadians(angle) {
